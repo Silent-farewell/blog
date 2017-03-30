@@ -1,0 +1,49 @@
+<include file='Common:header'/>
+<include file='Common:nav'/>
+
+<!--主体-->
+	<div class="container">
+	<div class="row clearfix" id="zhuti">
+		<div class="col-md-12 column">
+			
+			<include file="Common:tupian" />
+			
+			<div class="row clearfix">
+				<div class="col-md-9 column">
+					
+					<ol class="breadcrumb">
+					    <li><a href="index.php">首页</a></li>
+					    <li><a href="{:U('/c_' . $ids)}">{$fenlei}</a></li>
+					</ol>
+
+					<foreach name='blog' item='v'>
+						
+						<div class="yulan">
+							<h3>
+								<a href="{:U('/' . $v['id'])}" target='_blank'>{$v.title}</a>
+							</h3>
+							<p>
+								{$v.summary}
+							</p>
+							<p id="shijie">
+								{$v.time|date='Y年m月d日', ###}
+							</p>
+						</div>
+					</foreach>
+
+					<div class="fenye">
+					<ul class="pagination">
+						{$page}
+					</ul>
+					</div>
+					<hr>
+				</div>
+			
+	<!--主体右侧-->
+		<include file='Common:right'/>
+			</div>
+		</div>
+	</div>
+</div><!--container-->
+<!--底部-->
+<include file='Common:bottom'/>

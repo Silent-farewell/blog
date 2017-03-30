@@ -1,0 +1,65 @@
+body {
+  font-family: "Microsoft YaHei",  sans-serif;
+}
+
+#toubu {
+	background-color:#009688;
+}
+
+#toubu a:link {
+	font-size: 20px;
+	color: white;
+}
+
+#toubu a:visited {
+	background-color: #18BC9C;
+	color: white;
+}	
+
+#toubu a:hover {
+	background-color: #18BC9C;
+}
+
+#toubu a:active {
+	background-color: #18BC9C;
+}
+
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+#zhuti {
+	font-size: 18px;
+	margin-top: 80px;
+}
+
+.clearfix {
+	margin-top: 20px;
+}
+
+.clearfix h2 {
+	color: #009688;
+}
+
+.clearfix a:hover {
+	color: #009688;
+}
+
+#shijie {
+	color: gray;
+}
+
+.content img {
+	max-width: 100%;
+}
+
+.fenye {
+	text-align: center;
+}
+
+.pagination {
+	display: inline-block;
+}
+
