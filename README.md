@@ -26,8 +26,7 @@
    'DB_HOST' => '127.0.0.1',    
    'DB_USER' => 'root',      
    'DB_PWD' => '123456',    
-   'DB_NAME' => 'myblog',    
-   'DB_PREFIX' => 'hd_',   
+   'DB_NAME' => 'myblog',      
 
     //REDIS服务器地址   
     'REDIS_HOST' => '127.0.0.1',   
