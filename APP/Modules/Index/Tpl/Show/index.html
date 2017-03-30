@@ -1,0 +1,39 @@
+<include file='Common:header'/>
+	<link rel="stylesheet" href="__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Data/font-awesome-4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+<include file='Common:nav'/>
+
+<!--主体-->
+	<div class="container">
+	<div class="row clearfix" id="zhuti">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-9 column" >
+					
+					<ol class="breadcrumb">
+					    <li><a href="index.php">首页</a></li>
+					    <php>$last = count($parent) - 1;</php>
+					    <foreach name='parent' item='v'>
+						<li class="active"><a href="{:U('/c_' . $v['id'])}">{$v.name}</a><if condition='$key neq $last'></if></li>
+					    </foreach>
+					</ol>
+
+					<div class="title">
+						<h2 class="blog-post-title">{$blog.title}</h2>
+						<p class="blog-post-meta" style="color:gray;">{$blog.time|date='Y年m月d日', ###} </p>
+					</div>
+					<div class='content' style="word-break:break-all">{$blog.content}</div>
+					<hr>
+				</div>
+	<!--主体右侧-->
+		<include file='Common:right'/>
+			</div>
+		</div>
+	</div>
+</div><!--container-->
+<!--底部-->
+<include file='Common:bottom'/>

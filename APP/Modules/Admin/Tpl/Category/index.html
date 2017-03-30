@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap core CSS -->
+    <link href="__PUBLIC__/Css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+  	<h2 class="sub-header">分类列表</h2>
+  	<form action="{:U(GROUP_NAME . '/Category/sortCate')}" method='post'>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                    <th>id</th>
+		<th>名称</th>
+		<th>级别</th>
+		<th>排序</th>
+		<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              	<foreach name='cate' item='v'>
+			<tr>
+				<td>{$v.id}</td>
+				<td>{$v.html}{$v.name}</td>
+				<td>{$v.level}</td>
+				<td>
+					<input type="text" class="form-control" name='{$v.id}' value='{$v.sort}' />
+				</td>
+				<td>
+					[<a href="{:U(GROUP_NAME . '/Category/addCate', array('pid' => $v['id']))}">添加子分类</a>]
+					[<a href="">修改</a>]
+					[<a href="">删除</a>]
+				</td>
+			</tr>
+		</foreach>
+
+		<tr>
+			<td colspan="5" align="center">
+				<button type="submit" class="btn btn-success" >排序</button>
+			</td>
+		</tr>
+                
+              </tbody>
+            </table>
+          </div>
+          </form>
+  </body>
+</html>
