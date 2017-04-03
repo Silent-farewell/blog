@@ -13,6 +13,10 @@ Class ShowAction extends Action {
 		import('Class.Category', APP_PATH);
 		$cate = M('cate')->order('sort')->select();
 		$this->parent = Category::getParents($cate, $cid);
+		
+		$title = $this->blog['title'];
+		$title .= ' - ';
+		$this->assign('title', $title);
 
 		$this->display();
 	}
