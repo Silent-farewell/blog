@@ -25,6 +25,10 @@ Class ListAction extends Action {
 
 		$this->blog = D('BlogView')->getAll($where, $limit);
 		$this->page = $page->show();
+		
+		$title = $fenlei["name"];
+		$title .= ' - ';
+		$this->assign('title', $title);
 
 		$this->display();
 	}
