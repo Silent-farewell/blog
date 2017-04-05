@@ -24,7 +24,7 @@
 
 					<div class="title">
 						<h2 class="blog-post-title">{$blog.title}</h2>
-						<p class="blog-post-meta" style="color:gray;">{$blog.time|date='Y年m月d日', ###} </p>
+						<p class="blog-post-meta" style="color:gray;">{$blog.time|date='Y年m月d日', ###} </p><script type='text/javascript' src='{:U(GROUP_NAME . "/Show/clickNum", array("id" => $blog["id"]))}'></script>
 					</div>
 					<div class='content' style="word-break:break-all">{$blog.content}</div>
 					<hr>
